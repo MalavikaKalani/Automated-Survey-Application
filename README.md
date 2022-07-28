@@ -71,10 +71,12 @@ After the required game objects have been set up in UnityEngine, we need to atta
 This completes the setup of the project in UnityEngine with all the associated scripts. 
 
 In ReadText.cs, copy the path to your text file in the part of the code shown below to help the the script to read in your questions.
+
 ` string filePath = @"C:\Users\makalani\Desktop\APP-textfile.txt";
         if (File.Exists(filePath))`
         
 The functions are coded keeping in mind a specific format for the input textfile. See the simple example given below for better understadning and modify it to generate your own questions keeping the format intact. 
+
 `short-answer,1) What is your name?,no image,null
 short-answer,2) What is your age?,no image,null
 multiple-choice,3) What year of college are you in?,no image,null,4,first-year,sophomore,junior,senior
