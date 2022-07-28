@@ -33,20 +33,31 @@ List the ready features here:
 - Generates an output file storing the participant's answer along with the corresponding question.
 
 
-## Screenshots
-![Example screenshot](readmeImage.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
-
-
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+![Example screenshot](readmeImage.png)
+This is how the Unity screen layout looks like before you enter the playmode to begin the survey. The design was made for a cleaner layout however it is subject to change. To setup the project, you may do the following steps and create the game objects that will be used by the C# scripts:
+1. Create a new project on UnityEngine. Under the main camera, start by adding a UI Canvas which will serve as the parent game object. All other game objects will be      created under the Canvas.
+2. Add a UI Text which can be referred to as the question box. This will serve as the placeholder for all the questions that need to be displayed. 
+3. For short-answer questions, add a UI Input Field which can be referred to as the answer box. This will serve as the placeholder for any answers entered by the user. 
+4. For multiple-choice questions, add a UI Toggle which can be referred to as MC options. This will serve as the placeholder for all the options the user can choose      from for a multiple-choice question.
+5. For likert-scale questions, add a UI Slider which can be referred to as slider/likert slider. This will serve as the placeholder for the likert scale where the user    can drag values on. Add a UI text which can be referred to as slider text. This will serve as the paceholder to denote the two endpoints of the likert scale.
+6. For dropdown questions, add a UI Dropdown which can be referred to as dropdown/menu. This will serve as the dropdown menu holding all the options provided to the      user for dropdown questions. 
+7. For questions that include an image, add a UI Raw Image which can be referred to as image panel. This will be the placeholder for the respective image that needs to    be displayed. 
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+After all the game objects have been set up to represent components of each question, we need to add buttons that will help us switch between different types of questions with ease. Since each answer type is also different, the buttons will also help with storing the corresponding type of answer. Here are the following steps to set up the buttons: 
+1. Add a UI Button that can referred to as start survey button. This button will start the survey by changing the screen and displaying the first question. 
+2. Add a UI Button that can be referred to as short answer next. This button will appear when your screen displays a short answer type question. When it is clicked,      it will be responsible for storing the user response from the input field and generating the next question.
+3. Add a UI Button that can be referred to as multiple choice next. This button will appear when your screen displays a multiple choice type question. When it is          clicked, it will be responsible for storing the toggle option that the user has selected and generating the next question.
+4. Add a UI Button that can be referred to as likert next. This button will appear when your screen displays a likert type question. When it is clicked, it will be        responsible for storing the value on the slider dragged by the user and generating the next question.
+5. Add a UI Button that can be referred to as dropdown next. This button will appear when your screen displays a dropdown type question. When it is clicked, it will be    responsible for storing the option chosen by the user from the dropdown menu and generating the next question. 
+6. Lastly, add a UI Button that can be referred to as submit. This button will appear after all the questions have been answered. When it is clicked, it will be          responsible for creating a file named after the user with all the stored responses and exiting out of the playmode to end the survey. 
 
 
 ## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
+After the required game objects have been set up in UnityEngine, we need to attach some scripts that the game objects will implement when you enter the playmode. Add all the C# scripts provided in this project to your Assets folder of your Unity Project. 
+- Click on the Canvas Object and in the Inspector > click on Add Component and add the ReadText.cs script or simply drag it to the inspector to attach it to the         Canvas. Once you have attached the script, drag each game object to fill in the parameters of the script. (see image below for reference)
+![Example screenshot](readmeImage.png)
+  
 
 `write-your-code-here`
 
