@@ -61,11 +61,28 @@ After the required game objects have been set up in UnityEngine, we need to atta
   The following steps will explain how to attach the required functions on each button:
 a. In the 'On Click' component of your 'start survey' button, drag the Canvas Game Object and select ReadText to finally attach the ReadText.generate() function call.     This will tell the button to call the respective function when it is clicked. 
 b. In the 'On Click' component of your 'short-answer next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.readInputField() function     call. Then if your function has a parameter, drag the respective object to pass in the parameter. In this case, drag the game object InputField (i.e. answer box).     Click the '+' icon in the  'On Click' section to add another function call: drag the Canvas Game Object and select ReadText to also attach the ReadText.generate()     function call. The order is important because now when you click this button, it will store the answer entered by the user and then generate the next question. 
-  This is what it will look in the Inspector. You will replicate this process for the buttons of other questions.
-  ![Example screenshot](inspector.png)
+  This is what it will look like in the Inspector. You will replicate this process for the buttons of other questions.
+  ![Example screenshot](buttonInspector.png)
+c. In the 'On Click' component of your 'multiple choice next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.readSelectedToggle()        function call. Then add another function call for ReadText.generate() similar to what you did in step b. When this button is clicked, it will store the selected        toggle option and generate the next question.
+d. In the 'On Click' component of your 'likert next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.getSliderValue() function call.      Drag the game object Slider (i.e. slider/likert slider) to pass in the parameter. Then add another function call for ReadText.generate() similar to what you did in    step b. When this button is clicked, it will store the slider value dragged by the user and generate the next question. 
+e. In the 'On Click' component of your 'dropdown next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.getDropdownOption() function      call. Drag the game object Dropdown (i.e. dropdown/dropdown menu) to pass in the parameter. Then add another function call for ReadText.generate() similar to what      you did in step b. When this button is clicked, it will store the option on the dropdown menu selected by the user and generate the next question. 
+f. Lastly, in the 'On Click' component of your 'submit' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.createFile() function call. 
+   Then add another function call for SaveInput.exitSurvey(). The order is important because when the button is clicked, it will create the file and write the stored      responses and then exit the playmode. 
+This completes the setup of the project in UnityEngine with all the associated scripts. 
 
-`write-your-code-here`
+In ReadText.cs, copy the path to your text file in the part of the code shown below to help the the script to read in your questions.
+` string filePath = @"C:\Users\makalani\Desktop\APP-textfile.txt";
+        if (File.Exists(filePath))`
+        
+The functions are coded keeping in mind a specific format for the input textfile. See the simple example given below for better understadning and modify it to generate your own questions keeping the format intact. 
+`short-answer,1) What is your name?,no image,null
+short-answer,2) What is your age?,no image,null
+multiple-choice,3) What year of college are you in?,no image,null,4,first-year,sophomore,junior,senior
+likert,4) I experience some stereotype threats in my STEM courses.,no image,null
+dropdown,5) To which gender identity do you most identify?,no image,null,6, Female, Male, Transgender Female, Transgender Male,Non-Conforming,Prefer Not to Answer
+short-answer,6) Describe the image below.,image included,stereotypes`
 
+Lastly, you are encouraged to change any of the local positions defined in the scripts according to your preferences for how you would want the survey to be displayed. This is just a basic template and features are subject to change. 
 
 ## Project Status
 Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
