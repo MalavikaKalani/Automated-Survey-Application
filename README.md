@@ -84,6 +84,15 @@ likert,4) I experience some stereotype threats in my STEM courses.,no image,null
 dropdown,5) To which gender identity do you most identify?,no image,null,6, Female, Male, Transgender Female, Transgender Male,Non-Conforming,Prefer Not to Answer
 short-answer,6) Describe the image below.,image included,stereotypes`
 
+When the submit button is clicked and the survey is ended, an output file will be generated in the Assest folder with the following format showing the questions and the corresponding answers:
+
+`1) What is your name?,Malavika \\
+2) What is your age?,20
+3) What year of college are you in?,junior
+4) I experience some stereotype threats in my STEM courses.,3
+5) To which gender identity do you most identify?,Female
+6) Describe the image below.,whatever`
+
 Lastly, you are encouraged to change any of the local positions defined in the scripts according to your preferences for how you would want the survey to be displayed. This is just a basic template and features are subject to change. 
 
 ## Project Status
