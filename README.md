@@ -59,14 +59,14 @@ After the required game objects have been set up in UnityEngine, we need to atta
 ![Example screenshot](inspector.png)
   
   The following steps will explain how to attach the required functions on each button:
-a. In the 'On Click' component of your 'start survey' button, drag the Canvas Game Object and select ReadText to finally attach the ReadText.generate() function call.     This will tell the button to call the respective function when it is clicked. 
-b. In the 'On Click' component of your 'short-answer next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.readInputField() function     call. Then if your function has a parameter, drag the respective object to pass in the parameter. In this case, drag the game object InputField (i.e. answer box).     Click the '+' icon in the  'On Click' section to add another function call: drag the Canvas Game Object and select ReadText to also attach the ReadText.generate()     function call. The order is important because now when you click this button, it will store the answer entered by the user and then generate the next question. 
+1. In the 'On Click' component of your 'start survey' button, drag the Canvas Game Object and select ReadText to finally attach the ReadText.generate() function call.     This will tell the button to call the respective function when it is clicked. 
+2. In the 'On Click' component of your 'short-answer next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.readInputField() function     call. Then if your function has a parameter, drag the respective object to pass in the parameter. In this case, drag the game object InputField (i.e. answer box).     Click the '+' icon in the  'On Click' section to add another function call: drag the Canvas Game Object and select ReadText to also attach the ReadText.generate()     function call. The order is important because now when you click this button, it will store the answer entered by the user and then generate the next question. 
   This is what it will look like in the Inspector. You will replicate this process for the buttons of other questions.
   ![Example screenshot](buttonInspector.png)
-c. In the 'On Click' component of your 'multiple choice next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.readSelectedToggle()        function call. Then add another function call for ReadText.generate() similar to what you did in step b. When this button is clicked, it will store the selected        toggle option and generate the next question.
-d. In the 'On Click' component of your 'likert next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.getSliderValue() function call.      Drag the game object Slider (i.e. slider/likert slider) to pass in the parameter. Then add another function call for ReadText.generate() similar to what you did in    step b. When this button is clicked, it will store the slider value dragged by the user and generate the next question. 
-e. In the 'On Click' component of your 'dropdown next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.getDropdownOption() function      call. Drag the game object Dropdown (i.e. dropdown/dropdown menu) to pass in the parameter. Then add another function call for ReadText.generate() similar to what      you did in step b. When this button is clicked, it will store the option on the dropdown menu selected by the user and generate the next question. 
-f. Lastly, in the 'On Click' component of your 'submit' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.createFile() function call. 
+3. In the 'On Click' component of your 'multiple choice next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.readSelectedToggle()        function call. Then add another function call for ReadText.generate() similar to what you did in step 2. When this button is clicked, it will store the selected        toggle option and generate the next question.
+4. In the 'On Click' component of your 'likert next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.getSliderValue() function call.      Drag the game object Slider (i.e. slider/likert slider) to pass in the parameter. Then add another function call for ReadText.generate() similar to what you did in    step 2. When this button is clicked, it will store the slider value dragged by the user and generate the next question. 
+5. In the 'On Click' component of your 'dropdown next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.getDropdownOption() function      call. Drag the game object Dropdown (i.e. dropdown/dropdown menu) to pass in the parameter. Then add another function call for ReadText.generate() similar to what      you did in step 2. When this button is clicked, it will store the option on the dropdown menu selected by the user and generate the next question. 
+6. Lastly, in the 'On Click' component of your 'submit' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.createFile() function call. 
    Then add another function call for SaveInput.exitSurvey(). The order is important because when the button is clicked, it will create the file and write the stored      responses and then exit the playmode. 
 This completes the setup of the project in UnityEngine with all the associated scripts. 
 
@@ -85,27 +85,24 @@ short-answer,6) Describe the image below.,image included,stereotypes`
 Lastly, you are encouraged to change any of the local positions defined in the scripts according to your preferences for how you would want the survey to be displayed. This is just a basic template and features are subject to change. 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+This survey is complete for now but there is always more progress that can be made in terms of making the code more efficient and adding more features. The survey application is in a preliminary stage as it is yet to be used in VR experiments to understand its efficiency better. However, once this is combined with future projects, there can be more clarity about its strengths and weaknesses. 
 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+Areas for improvement:
+- The code could be more succinct and readable. 
+- There could be a better way to store each type of answer instead of attaching functions to a different button.
 
 To do:
-- Feature to be added 1
-- Feature to be added 2
-
+- Adding a feature to generate questions in a random order instead of the order it is written in the textfile.
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- This project was inspired by my research mentor Dr.Peck's ideas. I would like to thank her for her guidance.
+- I would also like to thank Shana Bellamy and Christopher Young (the two graduate students in my team) who helped me get comfortable with UnityEngine as  afirst-time user. 
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by MalavikaKalani(makalani@davidson.edu) - feel free to reach out to me with feedback and suggestions!
