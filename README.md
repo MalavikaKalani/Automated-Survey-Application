@@ -55,9 +55,14 @@ After all the game objects have been set up to represent components of each ques
 
 ## Usage
 After the required game objects have been set up in UnityEngine, we need to attach some scripts that the game objects will implement when you enter the playmode. Add all the C# scripts provided in this project to your Assets folder of your Unity Project. 
-- Click on the Canvas Object and in the Inspector > click on Add Component and add the ReadText.cs script or simply drag it to the inspector to attach it to the         Canvas. Once you have attached the script, drag each game object to fill in the parameters of the script. (see image below for reference)
-![Example screenshot](readmeImage.png)
+- Click on the Canvas Object and in the Inspector > click on Add Component and add the ReadText.cs script or simply drag it to the inspector to attach it to the         Canvas. Similarly, add the SaveInput.cs as a second component. Once you have attached both the scripts, drag each game object to fill in the parameters of the         scripts. This helps ypur C# script know which GameObject to use while running the code. (see image provided below for reference)
+![Example screenshot](inspector.png)
   
+  The following steps will explain how to attach the required functions on each button:
+a. In the 'On Click' component of your 'start survey' button, drag the Canvas Game Object and select ReadText to finally attach the ReadText.generate() function call.     This will tell the button to call the respective function when it is clicked. 
+b. In the 'On Click' component of your 'short-answer next' button, drag the Canvas Game Object and select SaveInput to attach the SaveInput.readInputField() function     call. Then if your function has a parameter, drag the respective object to pass in the parameter. In this case, drag the game object InputField (i.e. answer box).     Click the '+' icon in the  'On Click' section to add another function call: drag the Canvas Game Object and select ReadText to also attach the ReadText.generate()     function call. The order is important because now when you click this button, it will store the answer entered by the user and then generate the next question. 
+  This is what it will look in the Inspector. You will replicate this process for the buttons of other questions.
+  ![Example screenshot](inspector.png)
 
 `write-your-code-here`
 
