@@ -102,8 +102,8 @@ To do:
 
 ## Acknowledgements
 Give credit here.
-- This project was inspired by my research mentor Dr.Peck's ideas. I would like to thank her for her guidance.
-- I would also like to thank Shana Bellamy and Christopher Young (the two graduate students in my team) who helped me get comfortable with UnityEngine as  afirst-time user. 
+- This project was inspired by the ideas of my research mentor Dr.Tabitha Peck. I would like to thank her for her guidance and support.
+- I would also like to thank Shana Bellamy and Christopher Young (the two graduate students in my team) who helped me get comfortable with UnityEngine as a first-time user. 
 
 
 ## Contact
