@@ -86,7 +86,7 @@ short-answer,6) Describe the image below.,image included,stereotypes`
 
 When the submit button is clicked and the survey is ended, an output file will be generated in the Assest folder with the following format showing the questions and the corresponding answers:
 
-`1) What is your name?,Malavika \\
+`1) What is your name?,Malavika
 2) What is your age?,20
 3) What year of college are you in?,junior
 4) I experience some stereotype threats in my STEM courses.,3
