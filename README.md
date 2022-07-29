@@ -73,7 +73,7 @@ In ReadText.cs, name your text file in the part of the code shown below to help 
 
 ` string filePath = Application.dataPath + "/inputSurvey.txt";`
         
-The functions are coded keeping in mind a specific format for the input textfile. See the simple example given below for better understadning and modify it to generate your own questions keeping the format intact. 
+The functions are coded keeping in mind a specific format for the input textfile. See the simple example given below (and the inputSurvey.txt file provided for the correct format) for better understanding and modify it to generate your own questions keeping the format intact. 
 
 `short-answer,1) What is your name?,no image,null
 short-answer,2) What is your age?,no image,null
@@ -82,7 +82,7 @@ likert,4) I experience some stereotype threats in my STEM courses.,no image,null
 dropdown,5) To which gender identity do you most identify?,no image,null,6, Female, Male, Transgender Female, Transgender Male,Non-Conforming,Prefer Not to Answer
 short-answer,6) Describe the image below.,image included,stereotypes`
 
-When the submit button is clicked and the survey is ended, an output file will be generated in the Assest folder with the following format showing the questions and the corresponding answers:
+When the submit button is clicked and the survey is ended, an output file will be generated in the Assest folder (check output.txt for correct formatting) with the following format showing the questions and the corresponding answers:
 
 `1) What is your name?,Malavika
 2) What is your age?,20
