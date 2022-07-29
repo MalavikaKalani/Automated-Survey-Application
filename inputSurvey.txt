@@ -1,7 +1,0 @@
-short-answer,1) What is your name?,no image,null
-short-answer,2) What is your age?,no image,null
-multiple-choice,3) What year of college are you in?,no image,null,4,first-year,sophomore,junior,senior
-likert,4) I experience some stereotype threats in my STEM courses.,no image,null
-dropdown,5) To which gender identity do you most identify?,no image,null,6, Female, Male, Transgender Female, Transgender Male,Non-Conforming,Prefer Not to Answer
-short-answer,6) Describe the image below.,image included,stereotypes
-
