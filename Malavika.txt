@@ -1,0 +1,6 @@
+1) What is your name?,Malavika
+2) What is your age?,20
+3) What year of college are you in?,junior
+4) I experience some stereotype threats in my STEM courses.,3
+5) To which gender identity do you most identify?,Female
+6) Describe the image below.,whatever
