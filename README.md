@@ -69,10 +69,9 @@ After the required game objects have been set up in UnityEngine, we need to atta
    Then add another function call for SaveInput.exitSurvey(). The order is important because when the button is clicked, it will create the file and write the stored      responses and then exit the playmode. 
 This completes the setup of the project in UnityEngine with all the associated scripts. 
 
-In ReadText.cs, copy the path to your text file in the part of the code shown below to help the the script to read in your questions.
+In ReadText.cs, name your text file in the part of the code shown below to help the the script to read in your questions.
 
-` string filePath = @"C:\Users\makalani\Desktop\APP-textfile.txt";
-        if (File.Exists(filePath))`
+` string filePath = Application.dataPath + "/inputSurvey.txt";`
         
 The functions are coded keeping in mind a specific format for the input textfile. See the simple example given below for better understadning and modify it to generate your own questions keeping the format intact. 
 
