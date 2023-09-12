@@ -94,11 +94,10 @@ When the submit button is clicked and the survey is ended, an output file will b
 Lastly, you are encouraged to change any of the local positions defined in the scripts according to your preferences for how you would want the survey to be displayed. This is just a basic template and features are subject to change. 
 
 ## Project Status
-This survey is complete for now but there is always more progress that can be made in terms of making the code more efficient and adding more features. The survey application is in a preliminary stage as it is yet to be used in VR experiments to understand its efficiency better. However, once this is combined with future projects, there can be more clarity about its strengths and weaknesses. 
+This survey is complete for now but there is always more progress that can be made in terms of making the code more efficient and adding more features. The survey application is in a preliminary stage as it is yet to be used in VR experiments to understand its efficiency better. However, once this is combined with future projects, there can be more clarity about its strengths and weaknesses. I believe this is a strong starting point to incorporate surveys for participants in virtual reality research without hving to use an external survey platform.   
 
 
 ## Room for Improvement
-Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Areas for improvement:
 - The code could be more succinct and readable. 
@@ -108,7 +107,6 @@ To do:
 - Adding a feature to generate questions in a random order instead of the order it is written in the textfile.
 
 ## Acknowledgements
-Give credit here.
 - This project was inspired by the ideas of my research mentor Dr.Tabitha Peck. I would like to thank her for her guidance and support.
 - I would also like to thank Shana Bellamy and Christopher You (the two graduate students in my team) who helped me get comfortable with UnityEngine as a first-time user. 
 
